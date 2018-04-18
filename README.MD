@@ -71,18 +71,14 @@ Visual Studio 2017 Comunity Edition.
 Sql Server 2017.
 ```
 
-## Authors
+## Autores
  
  Pere Zamora.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Recursos utilizados
 
 Se han realizado busquedas en la red para realizar la dema, de los cuales indico algunos links.
 
-* [https://programacion.net/articulo/transacciones_en_sql_server_299](Transacciones sql server)
-* [https://docs.microsoft.com/es-es/sql/t-sql/language-elements/transactions-transact-sql](Transacciones doc)
-* [https://docs.microsoft.com/es-es/sql/t-sql/language-elements/try-catch-transact-sql](Try/Catch)
+* [https://programacion.net/articulo/transacciones_en_sql_server_299]
+* [https://docs.microsoft.com/es-es/sql/t-sql/language-elements/transactions-transact-sql]
+* [https://docs.microsoft.com/es-es/sql/t-sql/language-elements/try-catch-transact-sql]
