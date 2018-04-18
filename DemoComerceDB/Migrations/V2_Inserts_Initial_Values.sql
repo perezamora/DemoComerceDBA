@@ -1,18 +1,17 @@
+USE ComerceDB  
 INSERT INTO dbo.Facturas
-   ([CustomerId],[Nombre],[Lugar],[Email])
+   ([Id_Cliente],[FechaFactura],[Total])
 VALUES
-   ( 1, N'Juan Jose', N'Albacete', N'No tiene'),
-   ( 2, N'Katia', N'Rusia', N'katia@adventure-works.com'),
-   ( 3, N'Francisco Garcia', N'Salamanca', N'fjose@adventure-works.com'),
-   ( 4, N'Joan Vilanova', N'Barcelona', N'jvilanova@adventure-works.com')
+   ( 1, convert(datetime,'18-06-12 10:34:09 PM'), 2000.56),
+   ( 1, convert(datetime,'18-06-12 10:34:09 PM'), 2000.56),
+   ( 2, convert(datetime,'18-06-12 10:34:09 PM'), 2000.56)
 GO
 
 IF OBJECT_ID('dbo.LineasFacturas', 'U') IS NOT NULL
 INSERT INTO dbo.LineasFacturas
-   ([CustomerId],[Nombre],[Lugar],[Email],[sueldo])
+   ([Id_Factura],[FechaVencimiento],[Impuesto],[Subtotal],[Descuento],[CodArticulo],[Cantidad])
 VALUES
-   ( 80, N'Juan Jose', N'Albacete', N'No tiene',100.20),
-   ( 200, N'Katia', N'Rusia', N'katia@adventure-works.com',1000.45),
-   ( 300, N'Francisco Garcia', N'Salamanca', N'fjose@adventure-works.com',2000.56),
-   ( 400, N'Joan Vilanova', N'Barcelona', N'jvilanova@adventure-works.com',3000.54)
+   ( 1, convert(datetime,'18-06-12 10:34:09 PM'), 20, 100, 50, N'1110-11', 1),
+   ( 1, convert(datetime,'18-06-12 10:34:09 PM'), 30, 300, 25, N'8888-11', 2),
+   ( 2, convert(datetime,'18-06-12 10:34:09 PM'), 20, 600, 50, N'1234-11', 1)
 GO

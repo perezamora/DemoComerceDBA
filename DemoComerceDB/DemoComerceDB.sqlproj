@@ -64,5 +64,9 @@
     <Build Include="Migrations\V1_Init_Comerce_DB.sql" />
     <Build Include="Migrations\V2_Inserts_Initial_Values.sql" />
     <Build Include="scripts\create_DBA_Comerce.sql" />
+    <Build Include="Migrations\V3_Transact_TC.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scripts\Drop_Table_DBA_Comerce.sql" />
   </ItemGroup>
 </Project>

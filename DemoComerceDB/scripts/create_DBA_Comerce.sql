@@ -1,5 +1,7 @@
 EXEC sp_configure filestream_access_level, 2  
+GO
 RECONFIGURE  
+GO
 USE master
 GO
 IF NOT EXISTS (
@@ -16,20 +18,15 @@ ON PRIMARY(
 	filegrowth=1MB),
 FILEGROUP ComerceDB_FG1
   ( NAME = 'ComerceDB_FG1_Dat1',
-    FILENAME =
-       'C:\DataBase\ComerceDB\NDF\ComerceDB_FG1_1.ndf',
+    FILENAME ='C:\DataBase\ComerceDB\NDF\ComerceDB_FG1_1.ndf',
     SIZE = 1MB,
     MAXSIZE=10MB,
     FILEGROWTH=1MB),
   ( NAME = 'ComerceDB_FG1_Dat2',
-    FILENAME =
-       'C:\DataBase\ComerceDB\NDF\ComerceDB_FG1_2.ndf',
+    FILENAME ='C:\DataBase\ComerceDB\NDF\ComerceDB_FG1_2.ndf',
     SIZE = 1MB,
     MAXSIZE=10MB,
-    FILEGROWTH=1MB),
-FILEGROUP FileStreamGroup1 CONTAINS FILESTREAM
-  ( NAME = 'ComerceDB_FS',
-    FILENAME = 'c:\DataBase\ComerceDB\filestream1')
+    FILEGROWTH=1MB)
 LOG ON(
 	name=ComerceDB_log,
 	filename='C:\DataBase\ComerceDB\LDF\ComerceDB_log.ldf',
